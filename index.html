@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holiday Countdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Holiday Countdown</h1>
+
+    <section class="controls">
+      <label for="country">Country:</label>
+      <select id="country" aria-label="Select country"></select>
+      <button id="refresh">Refresh</button>
+    </section>
+
+    <section id="nextHoliday" class="card hidden">
+      <h2 id="holidayName"></h2>
+      <p id="holidayDate" class="muted"></p>
+      <div id="countdown" class="countdown">
+        <div><span id="days">0</span><small>days</small></div>
+        <div><span id="hours">00</span><small>hours</small></div>
+        <div><span id="minutes">00</span><small>minutes</small></div>
+        <div><span id="seconds">00</span><small>seconds</small></div>
+      </div>
+      <p id="localInfo" class="muted small"></p>
+    </section>
+
+    <section id="list" class="card hidden">
+      <h3>Upcoming holidays</h3>
+      <ul id="upcoming"></ul>
+    </section>
+
+    <section id="error" class="card error hidden"></section>
+
+    <footer class="muted small">
+      Data from Nager.Date · <a href="https://date.nager.at" target="_blank" rel="noopener">date.nager.at</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
